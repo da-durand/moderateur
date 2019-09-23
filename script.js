@@ -1,20 +1,16 @@
-var textElement = document.getElementById("text");
 var smileys = ["A", ":D", "x)", ":(", ";)"];
 var buttonInput = document.getElementById("btn");
 var resultElement = document.getElementById("result");
-
+var textElement = document.getElementById("text").innerHTML;
+// txt=list(textElement)
 i = 0;
 j = 0;
 
-var btnEvent = buttonInput.addEventListener("click", function () {
-    while (i < textElement.value.length) {
-        while (j < smileys.length) {
-            if (textElement.value[i] == smileys[j]) {
-                resultElement.innerHTML = "Teste";
-            }
-            j++;
-        }
-        console.log("teste");
-    }
+buttonInput.addEventListener("click", function () {
+    // while (i < txt.length) {
+    //     if (txt[i]==smileys[j]
+
+    // }
+    console.log(textElement);
 
 })
