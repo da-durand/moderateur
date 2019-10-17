@@ -1,16 +1,16 @@
-var smileys = [":)", ":D", "x)", ";)", ":p", ";p"];
-var buttonInput = document.getElementById("btn");
-var resultElement = document.getElementById("result");
-var textElement = document.getElementById("text");
+$(document).ready(function(){
+    
+    var smileys = [":)", ":D", "x)", ";)", ":p", ";p"];
 
-
-buttonInput.addEventListener("click", function () {
-    var text = textElement.value;
-    for (let i = 0; i < smileys.length; i++){
-        while (text.includes(smileys[i])){
-            text = text.replace(smileys[i], "--")
+    $("#btn").click(function(){
+        text = $("#text").html();
+        for (let i = 0; i < smileys.length; i++){
+            while (text.includes(smileys[i])){
+                text = text.replace(smileys[i], "--")
+                console.log(text);
+            }
         }
-    }
-    console.log(text);
-    resultElement.innerHTML = text;
-})
+        $("#result").text(text);
+    })
+    
+});
